@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MP.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700">
+    <title>Elite Decor - Categories</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="images/logo.png" alt="Elite Decor Logo"> 
+                <span>ELITE DECOR</span>
+            </div>
+            <nav class="main-nav">
+                <a href="mpWELCOME.html" class="nav-link">HOME</a>
+                <a href="mpHOME.html" class="nav-link active">CATEGORIES</a> 
+                <a href="mpCART.html" id="cart-link" class="nav-link">CART (<span id="cart-count">0</span>)</a>
+                <a href="mpHELP.html" class="nav-link">HELP</a>
+                
+                <div class="dropdown">
+                    <a href="#" class="nav-link">ACCOUNT ▼</a>
+                    <div class="dropdown-content">
+                        <a href="mpLOGIN.html">Login</a>
+                        <a href="mpSIGNUP.html">Sign Up</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1 style="text-align: center; margin-bottom: 40px;">Explore Our Collections</h1>
+        
+        <section class="category-container">
+            
+            <div class="category-card">
+                <a href="mpLIGHTING.html" class="category-link">
+                    <img src="images/LIGHTING-default.jpg" alt="Lighting" class="default-img">
+                    <img src="images/LIGHTING-hover.jpg" alt="Lighting on Hover" class="hover-img"> 
+                    <div class="category-overlay">LIGHTING</div>
+                </a>
+            </div>
+
+            <div class="category-card">
+                <a href="mpSEATS.html" class="category-link">
+                    <img src="images/SEATS-default.jpg" alt="Seating" class="default-img">
+                    <img src="images/SEATS-hover.jpg" alt="Seating on Hover" class="hover-img">
+                    <div class="category-overlay">SEATING</div>
+                </a>
+            </div>
+
+            <div class="category-card">
+                <a href="mpTABLES.html" class="category-link">
+                    <img src="images/TABLES-default.jpg" alt="Tables" class="default-img">
+                    <img src="images/TABLES-hover.jpg" alt="Tables on Hover" class="hover-img">
+                    <div class="category-overlay">TABLES</div>
+                </a>
+            </div>
+
+            <div class="category-card">
+                <a href="mpMIRRORS.html" class="category-link">
+                    <img src="images/MIRRORS-default.jpg" alt="Mirrors" class="default-img">
+                    <img src="images/MIRRORS-hover.jpg" alt="Mirrors on Hover" class="hover-img">
+                    <div class="category-overlay">MIRRORS</div>
+                </a>
+            </div>
+            
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="footer-nav">
+            <a href="mpHOME.html">Categories</a>
+            <a href="mpHELP.html">Support Center</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+        <div class="footer-text">
+            <p>A design so unique created just for you!</p>
+            <p>Playful, modern, and inspirational.</p>
+            <p>&copy; 2025 Elite Decor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const ALL_PRODUCTS = {
+    'LIT-001': { name: 'Homesake Black Metal Table Lamp', price: 1200.00, img: 'images/LIT-001.jpg' },
+    'LIT-002': { name: 'Algae Trophy Carved Table Lamp Khadi Drum', price: 1850.00, img: 'images/LIT-002.jpg' },
+    'LIT-003': { name: 'Metallic Pendant hanging light, hanging lamp 8', price: 900.00, img: 'images/LIT-003.jpg' },
+    'LIT-004': { name: 'Off-White & Black Solid Lotus Hanging Light', price: 4500.00, img: 'images/LIT-004.jpg' },
+    'LIT-005': { name: 'Orange Tree Kesi Ceiling Lamp Big', price: 10700.00, img: 'images/LIT-005.jpg' },
+    'LIT-006': { name: 'Modern Desk Night Lamp', price: 1500.00, img: 'images/LIT-006.jpg' },
+    
+    'MIR-001': { name: 'Plantex Frameless Rectangle Mirror', price: 899.00, img: 'images/MIR-001.jpg' },
+    'MIR-002': { name: 'Desireglass Capsule Design Wall Mirror', price: 615.00, img: 'images/MIR-002.jpg' },
+    'MIR-003': { name: 'Rose Gold Mild Steel Talent Wall Mirror', price: 2100.00, img: 'images/MIR-003.jpg' },
+    'MIR-004': { name: 'Desireglass Stylish LED Mirror with Touch Sensor', price: 1700.00, img: 'images/MIR-004.jpg' },
+    'MIR-005': { name: 'Kinsta Led Bathroom Mirror With Touch Sensor', price: 2800.00, img: 'images/MIR-005.jpg' },
+    'MIR-006': { name: 'Gold Metal Wall Mirrors', price: 5500.00, img: 'images/MIR-006.jpg' },
+
+    'SET-001': { name: 'Paulo Fabric Chair Footrest', price: 3950.00, img: 'images/SET-001.jpg' },
+    'SET-002': { name: 'Stalley Sheesham Wood Arm Chair', price: 4200.00, img: 'images/SET-002.jpg' },
+    'SET-003': { name: 'Modern Velvet Accent Chair with Gold-Tone Legs', price: 13000.00, img: 'images/SET-003.jpg' },
+    'SET-004': { name: 'Crisper Lounge Chair (Cotton, Cream Robins)', price: 9000.00, img: 'images/SET-004.jpg' },
+    'SET-005': { name: 'Paulina Solid Wood Arm Chair In Gold Wash Finish', price: 9500.00, img: 'images/SET-005.jpg' },
+    'SET-006': { name: 'Kingsman Furnitures ABEL Rattan Accent Arm Chair for Home', price: 6000.00, img: 'images/SET-006.jpg' },
+
+    'TBL-001': { name: 'wow craft Multi-Purpose Foldable', price: 1899.00, img: 'images/TBL-001.jpg' },
+    'TBL-002': { name: '6-Seater Dining Table', price: 2615.00, img: 'images/TBL-002.jpg' },
+    'TBL-003': { name: 'Nilkamal Ultima Dining Table', price: 5500.00, img: 'images/TBL-003.jpg' },
+    'TBL-004': { name: 'Madesa Gamer table Engineered Wood Multipurpose Table', price: 9200.00, img: 'images/TBL-004.jpg' },
+    'TBL-005': { name: 'Venue Go Study Table', price: 7800.00, img: 'images/TBL-005.jpg' },
+    'TBL-006': { name: 'Lago Air Round Glass Table', price: 12800.00, img: 'images/TBL-006.jpg' }
+}; 
+        function getCart() { 
+            const cartString = localStorage.getItem('shoppingCart');
+            return cartString ? JSON.parse(cartString) : {}; 
+        }
+        function saveCart(cart) {
+            localStorage.setItem('shoppingCart', JSON.stringify(cart));
+            updateCartCount();
+        }
+        function updateCartCount() {
+            const cart = getCart();
+            const totalItems = Object.values(cart).reduce((sum, qty) => sum + qty, 0);
+            const countElement = document.getElementById('cart-count');
+            if (countElement) {
+                 countElement.textContent = totalItems;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+    </script>
+</body>
+</html>

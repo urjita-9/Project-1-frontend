@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MP.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700">
+    <title>Elite Decor - Help</title>
+    <style>
+        .help-section {
+            padding: 20px;
+            background-color: var(--text-light);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--pale-pink);
+        }
+        .faq-item h3 {
+            color: var(--text-dark);
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+        .faq-item p {
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="images/logo.png" alt="Elite Decor Logo"> 
+                <span>ELITE DECOR</span>
+            </div>
+            <nav class="main-nav">
+                <a href="mpWELCOME.html" class="nav-link">HOME</a>
+                <a href="mpHOME.html" class="nav-link">CATEGORIES</a> 
+                <a href="mpCART.html" id="cart-link" class="nav-link">CART (<span id="cart-count">0</span>)</a>
+                <a href="mpHELP.html" class="nav-link active">HELP</a>
+                
+                <div class="dropdown">
+                    <a href="#" class="nav-link">ACCOUNT ▼</a>
+                    <div class="dropdown-content">
+                        <a href="mpLOGIN.html">Login</a>
+                        <a href="mpSIGNUP.html">Sign Up</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1 style="text-align: center; margin-bottom: 40px;">Need Assistance?</h1>
+        
+        <section class="help-section">
+            <div class="faq-item">
+                <h3>How do I track my order?</h3>
+                <p>Once your order ships, we will send you an email notification with a tracking number and a link to the carrier's website. You can also view the status on your Account page after logging in.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What is your return policy?</h3>
+                <p>We accept returns within 30 days of delivery, provided the item is unused and in its original packaging. Please contact our support team to initiate a return process.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>How do I update my cart quantity?</h3>
+                <p>On the Cart page, use the **'–'** and **'+'** buttons next to each item to adjust the quantity. The total will update automatically. To remove an item, set the quantity to zero or click the 'Remove' button.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Contact Customer Service</h3>
+                <p>Email us at: <a href="mailto:support@elitedecor.com" style="color: var(--primary-pink); text-decoration: none;">support@elitedecor.com</a></p>
+                <p>Call us at: +91 98765 43210 (Mon-Fri, 9am - 5pm IST)</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="footer-nav">
+            <a href="mpHOME.html">Categories</a>
+            <a href="mpHELP.html">Support Center</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+        <div class="footer-text">
+            <p>A design so unique created just for you!</p>
+            <p>Playful, modern, and inspirational.</p>
+            <p>&copy; 2025 Elite Decor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function getCart() { 
+            const cartString = localStorage.getItem('shoppingCart');
+            return cartString ? JSON.parse(cartString) : {}; 
+        }
+        function updateCartCount() {
+            const cart = getCart();
+            const totalItems = Object.values(cart).reduce((sum, qty) => sum + qty, 0);
+            const countElement = document.getElementById('cart-count');
+            if (countElement) {
+                 countElement.textContent = totalItems;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+    </script>
+</body>
+</html>

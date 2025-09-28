@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MP.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700">
+    <title>Elite Decor - Welcome</title>
+    <style>
+        .slideshow-container {
+            position: relative;
+            height: 60vh; 
+            width: 100%; 
+            overflow: hidden;
+        }
+
+        .mySlides {
+            display: none; 
+            width: 100%;
+            height: 100%;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: fade 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            text-align: center;
+            color: var(--text-light);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            width: 80%;
+        }
+        
+        .hero-content h1 {
+            font-size: 4em;
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        .slideshow-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 105, 180, 0.4); /* Pink overlay */
+            z-index: 5;
+        }
+        
+        .main-content {
+            text-align: center;
+            padding: 50px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="images/logo.png" alt="Elite Decor Logo"> 
+                <span>ELITE DECOR</span>
+            </div>
+            <nav class="main-nav">
+                <a href="mpWELCOME.html" class="nav-link active">HOME</a>
+                <a href="mpHOME.html" class="nav-link">CATEGORIES</a> 
+                <a href="mpCART.html" id="cart-link" class="nav-link">CART (<span id="cart-count">0</span>)</a>
+                <a href="mpHELP.html" class="nav-link">HELP</a>
+                
+                <div class="dropdown">
+                    <a href="#" class="nav-link">ACCOUNT ▼</a>
+                    <div class="dropdown-content">
+                        <a href="mpLOGIN.html">Login</a>
+                        <a href="mpSIGNUP.html">Sign Up</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="images/slide1.jpg" alt="Decor Slide 1">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/slide2.jpg" alt="Decor Slide 2">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/slide3.jpg" alt="Decor Slide 3">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/slide4.jpg" alt="Decor Slide 4">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/slide5.jpg" alt="Decor Slide 5">
+            </div>
+            <div class="slideshow-overlay"></div>
+            
+            <div class="hero-content">
+                <h1>Find Your Style. Define Your Space.</h1>
+                <p>Curated collections of modern and luxurious home furnishings.</p>
+                <a href="mpHOME.html" class="action-btn">SHOP NOW</a>
+            </div>
+        </section>
+        
+        <section class="main-content">
+            <h2>Why Choose Elite Decor?</h2>
+            <div style="display: flex; justify-content: space-around; margin-top: 30px;">
+                <div style="max-width: 300px;">
+                    <h3>Exclusive Designs</h3>
+                    <p>Handpicked, unique pieces you won't find anywhere else, ensuring your space stands out.</p>
+                </div>
+                <div style="max-width: 300px;">
+                    <h3>Quality Craftsmanship</h3>
+                    <p>We source only the finest materials, guaranteeing durability and lasting beauty.</p>
+                </div>
+                <div style="max-width: 300px;">
+                    <h3>Seamless Experience</h3>
+                    <p>From browsing to checkout, we provide a luxurious and hassle-free shopping journey.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="footer-nav">
+            <a href="mpHOME.html">Categories</a>
+            <a href="mpHELP.html">Support Center</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+        <div class="footer-text">
+            <p>A design so unique created just for you!</p>
+            <p>Playful, modern, and inspirational.</p>
+            <p>&copy; 2025 Elite Decor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function getCart() { 
+            const cartString = localStorage.getItem('shoppingCart');
+            return cartString ? JSON.parse(cartString) : {}; 
+        }
+        function updateCartCount() {
+            const cart = getCart();
+            const totalItems = Object.values(cart).reduce((sum, qty) => sum + qty, 0);
+            const countElement = document.getElementById('cart-count');
+            if (countElement) {
+                 countElement.textContent = totalItems;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          slides[slideIndex-1].style.display = "block";  
+          
+          setTimeout(showSlides, 4000); 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="MP.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700">
+    <title>Elite Decor - Seating</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="images/logo.png" alt="Elite Decor Logo"> 
+                <span>ELITE DECOR</span>
+            </div>
+            <nav class="main-nav">
+                <a href="mpWELCOME.html" class="nav-link">HOME</a>
+                <a href="mpHOME.html" class="nav-link active">CATEGORIES</a> 
+                <a href="mpCART.html" id="cart-link" class="nav-link">CART (<span id="cart-count">0</span>)</a>
+                <a href="mpHELP.html" class="nav-link">HELP</a>
+                
+                <div class="dropdown">
+                    <a href="#" class="nav-link">ACCOUNT ▼</a>
+                    <div class="dropdown-content">
+                        <a href="mpLOGIN.html">Login</a>
+                        <a href="mpSIGNUP.html">Sign Up</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1 style="text-align: center; margin-bottom: 40px;">Luxury Seating Collection</h1>
+        
+        <section class="product-grid">
+            
+            <div class="product-card">
+                <img src="images/SET-001.jpg" alt="Paulo Fabric Chair Footrest">
+                <h3>Paulo Fabric Chair Footrest</h3>
+                <p>₹3,950.00</p>
+                <div class="quantity-selector">
+                    <button class="qty-changer" onclick="changeListingQty('SET-001', -1)">–</button>
+                    <input type="number" id="qty-SET-001" value="1" min="1" readonly>
+                    <button class="qty-changer" onclick="changeListingQty('SET-001', 1)">+</button>
+                </div>
+                <button class="action-btn" onclick="addToCartFromListing('SET-001')">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/SET-002.jpg" alt="Stalley Sheesham Wood Arm Chair">
+                <h3>Stalley Sheesham Wood Arm Chair</h3>
+                <p>₹4,200.00</p>
+                <div class="quantity-selector">
+                    <button class="qty-changer" onclick="changeListingQty('SET-002', -1)">–</button>
+                    <input type="number" id="qty-SET-002" value="1" min="1" readonly>
+                    <button class="qty-changer" onclick="changeListingQty('SET-002', 1)">+</button>
+                </div>
+                <button class="action-btn" onclick="addToCartFromListing('SET-002')">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="images/SET-003.jpg" alt="Modern Velvet Accent Chair with Gold-Tone Legs">
+                <h3>Modern Velvet Accent Chair with Gold-Tone Legs</h3>
+                <p>₹13,000.00</p>
+                <div class="quantity-selector">
+                    <button class="qty-changer" onclick="changeListingQty('SET-003', -1)">–</button>
+                    <input type="number" id="qty-SET-003" value="1" min="1" readonly>
+                    <button class="qty-changer" onclick="changeListingQty('SET-003', 1)">+</button>
+                </div>
+                <button class="action-btn" onclick="addToCartFromListing('SET-003')">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/SET-004.jpg" alt="Crisper Lounge Chair (Cotton, Cream Robins)">
+                <h3>Crisper Lounge Chair (Cotton, Cream Robins)</h3>
+                <p>₹9,000.00</p>
+                <div class="quantity-selector">
+                    <button class="qty-changer" onclick="changeListingQty('SET-004', -1)">–</button>
+                    <input type="number" id="qty-SET-004" value="1" min="1" readonly>
+                    <button class="qty-changer" onclick="changeListingQty('SET-004', 1)">+</button>
+                </div>
+                <button class="action-btn" onclick="addToCartFromListing('SET-004')">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/SET-005.jpg" alt="Paulina Solid Wood Arm Chair In Gold Wash Finish">
+                <h3>Paulina Solid Wood Arm Chair In Gold Wash Finish</h3>
+                <p>₹9,500.00</p>
+                <div class="quantity-selector">
+                    <button class="qty-changer" onclick="changeListingQty('SET-005', -1)">–</button>
+                    <input type="number" id="qty-SET-005" value="1" min="1" readonly>
+                    <button class="qty-changer" onclick="changeListingQty('SET-005', 1)">+</button>
+                </div>
+                <button class="action-btn" onclick="addToCartFromListing('SET-005')">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/SET-006.jpg" alt="Kingsman Furnitures ABEL Rattan Accent Arm Chair for Home">
+                <h3>Kingsman Furnitures ABEL Rattan Accent Arm Chair for Home</h3>
+                <p>₹6,000.00</p>
+                <div class="quantity-selector">
+                    <button class="qty-changer" onclick="changeListingQty('SET-006', -1)">–</button>
+                    <input type="number" id="qty-SET-006" value="1" min="1" readonly>
+                    <button class="qty-changer" onclick="changeListingQty('SET-006', 1)">+</button>
+                </div>
+                <button class="action-btn" onclick="addToCartFromListing('SET-006')">Add to Cart</button>
+            </div>
+            
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="footer-nav">
+            <a href="mpHOME.html">Categories</a>
+            <a href="mpHELP.html">Support Center</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+        <div class="footer-text">
+            <p>A design so unique created just for you!</p>
+            <p>Playful, modern, and inspirational.</p>
+            <p>&copy; 2025 Elite Decor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const ALL_PRODUCTS = {
+    'LIT-001': { name: 'Homesake Black Metal Table Lamp', price: 1200.00, img: 'images/LIT-001.jpg' },
+    'LIT-002': { name: 'Algae Trophy Carved Table Lamp Khadi Drum', price: 1850.00, img: 'images/LIT-002.jpg' },
+    'LIT-003': { name: 'Metallic Pendant hanging light, hanging lamp 8', price: 900.00, img: 'images/LIT-003.jpg' },
+    'LIT-004': { name: 'Off-White & Black Solid Lotus Hanging Light', price: 4500.00, img: 'images/LIT-004.jpg' },
+    'LIT-005': { name: 'Orange Tree Kesi Ceiling Lamp Big', price: 10700.00, img: 'images/LIT-005.jpg' },
+    'LIT-006': { name: 'Modern Desk Night Lamp', price: 1500.00, img: 'images/LIT-006.jpg' },
+    
+    'MIR-001': { name: 'Plantex Frameless Rectangle Mirror', price: 899.00, img: 'images/MIR-001.jpg' },
+    'MIR-002': { name: 'Desireglass Capsule Design Wall Mirror', price: 615.00, img: 'images/MIR-002.jpg' },
+    'MIR-003': { name: 'Rose Gold Mild Steel Talent Wall Mirror', price: 2100.00, img: 'images/MIR-003.jpg' },
+    'MIR-004': { name: 'Desireglass Stylish LED Mirror with Touch Sensor', price: 1700.00, img: 'images/MIR-004.jpg' },
+    'MIR-005': { name: 'Kinsta Led Bathroom Mirror With Touch Sensor', price: 2800.00, img: 'images/MIR-005.jpg' },
+    'MIR-006': { name: 'Gold Metal Wall Mirrors', price: 5500.00, img: 'images/MIR-006.jpg' },
+
+    'SET-001': { name: 'Paulo Fabric Chair Footrest', price: 3950.00, img: 'images/SET-001.jpg' },
+    'SET-002': { name: 'Stalley Sheesham Wood Arm Chair', price: 4200.00, img: 'images/SET-002.jpg' },
+    'SET-003': { name: 'Modern Velvet Accent Chair with Gold-Tone Legs', price: 13000.00, img: 'images/SET-003.jpg' },
+    'SET-004': { name: 'Crisper Lounge Chair (Cotton, Cream Robins)', price: 9000.00, img: 'images/SET-004.jpg' },
+    'SET-005': { name: 'Paulina Solid Wood Arm Chair In Gold Wash Finish', price: 9500.00, img: 'images/SET-005.jpg' },
+    'SET-006': { name: 'Kingsman Furnitures ABEL Rattan Accent Arm Chair for Home', price: 6000.00, img: 'images/SET-006.jpg' },
+
+    'TBL-001': { name: 'wow craft Multi-Purpose Foldable', price: 1899.00, img: 'images/TBL-001.jpg' },
+    'TBL-002': { name: '6-Seater Dining Table', price: 2615.00, img: 'images/TBL-002.jpg' },
+    'TBL-003': { name: 'Nilkamal Ultima Dining Table', price: 5500.00, img: 'images/TBL-003.jpg' },
+    'TBL-004': { name: 'Madesa Gamer table Engineered Wood Multipurpose Table', price: 9200.00, img: 'images/TBL-004.jpg' },
+    'TBL-005': { name: 'Venue Go Study Table', price: 7800.00, img: 'images/TBL-005.jpg' },
+    'TBL-006': { name: 'Lago Air Round Glass Table', price: 12800.00, img: 'images/TBL-006.jpg' }
+};
+
+        function getCart() { 
+            const cartString = localStorage.getItem('shoppingCart');
+            return cartString ? JSON.parse(cartString) : {}; 
+        }
+        function saveCart(cart) {
+            localStorage.setItem('shoppingCart', JSON.stringify(cart));
+            updateCartCount();
+        }
+        function updateCartCount() {
+            const cart = getCart();
+            const totalItems = Object.values(cart).reduce((sum, qty) => sum + qty, 0);
+            const countElement = document.getElementById('cart-count');
+            if (countElement) {
+                 countElement.textContent = totalItems;
+            }
+        }
+        
+        function changeListingQty(id, delta) {
+            const input = document.getElementById('qty-' + id);
+            let currentQty = parseInt(input.value);
+            let newQty = currentQty + delta;
+            if (newQty >= 1) {
+                input.value = newQty;
+            }
+        }
+
+        function addToCartFromListing(id) {
+            const input = document.getElementById('qty-' + id);
+            const quantity = parseInt(input.value);
+            
+            let cart = getCart();
+            cart[id] = (cart[id] || 0) + quantity;
+            saveCart(cart);
+            
+            alert(`${quantity} of ${ALL_PRODUCTS[id].name} added to cart!`);
+            input.value = 1; 
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+    </script>
+</body>
+</html>
